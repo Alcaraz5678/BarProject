@@ -1,0 +1,21 @@
+# Ignorar binarios y carpetas de compilación
+bin/
+obj/
+*.dll
+*.exe
+
+# Ignorar archivos de configuración específicos
+appsettings.json
+appsettings.*.json
+.editorconfig
+
+# Ignorar carpetas generadas por el IDE
+.vscode/
+.idea/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar paquetes NuGet
+*.nupkg
+packages/
