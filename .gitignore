@@ -19,3 +19,4 @@ appsettings.*.json
 # Ignorar paquetes NuGet
 *.nupkg
 packages/
+
