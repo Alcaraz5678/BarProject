@@ -1,11 +1,12 @@
 using System;
 
 
-namespace BarProject.Src
+namespace Bar.src.models
 {
-
     public class Order
     {
+        private static int nextId = 1;
+
         public int idOrder { get; set; }
         public List<Product> orderProducts { get; set; }
         public double totalOrder { get; set; }
@@ -15,20 +16,28 @@ namespace BarProject.Src
 
         public Order()
         {
-
+            idOrder = nextId++;
             status = false;
             orderProducts = new List<Product>();
-
         }
 
-        public void CalculateTotal
+        public void CalculateTotal()
         {
-            //Implementar
+            double subtotal = orderProducts.Sum(product => product.Price);
+            CheckTip(tip, subtotal);
+            totalOrder = subtotal + valueTip;
         }
 
-        public void CheckTip(bool tip)
+        public void CheckTip(bool tip, double subtotal)
         {
-            //Implementar
+            if (tip)
+            {
+                valueTip = subtotal * 0.1;
+            }
+            else
+            {
+                valueTip = 0;
+            }
         }
     }
 }

@@ -35,8 +35,5 @@ namespace BarProject.Src
         {
             //Implementar
         }
-    
     }
-
-
 }
