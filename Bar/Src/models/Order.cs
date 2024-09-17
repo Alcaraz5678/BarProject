@@ -1,42 +1,44 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
-namespace Bar.src.models
+namespace BarProject.Bar.src.models
 {
     public class Order
     {
         private static int nextId = 1;
 
-        public int idOrder { get; set; }
-        public List<Product> orderProducts { get; set; }
-        public double totalOrder { get; set; }
-        public bool tip { get; set; }
-        public double valueTip { get; set; }
-        public bool status { get; set; }
+        public int IdOrder { get; set; }
+        public List<Product> OrderProducts { get; set; }
+        public double TotalOrder { get; set; }
+        public bool Tip { get; set; }
+        public double ValueTip { get; set; }
+        public bool Status { get; set; }
 
         public Order()
         {
-            idOrder = nextId++;
-            status = false;
-            orderProducts = new List<Product>();
+            IdOrder = nextId++;
+            Status = false;
+            OrderProducts = new List<Product>();
         }
 
         public void CalculateTotal()
         {
-            double subtotal = orderProducts.Sum(product => product.Price);
-            CheckTip(tip, subtotal);
-            totalOrder = subtotal + valueTip;
+            double subtotal = OrderProducts.Sum(product => product.Price);
+            CheckTip(Tip, subtotal);
+            TotalOrder = subtotal + ValueTip;
         }
 
-        public void CheckTip(bool tip, double subtotal)
+        public void CheckTip(bool Tip, double subtotal)
         {
-            if (tip)
+            if (Tip)
             {
-                valueTip = subtotal * 0.1;
+                ValueTip = subtotal * 0.1;
             }
             else
             {
-                valueTip = 0;
+                ValueTip = 0;
             }
         }
     }

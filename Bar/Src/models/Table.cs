@@ -1,44 +1,44 @@
 using System;
-
-namespace BarProject.Src
+using System.Collections.Generic;
+namespace BarProject.Bar.src.models
 {
     public class Table
     {
         private static int nextId = 1;
 
-        public int idTable { get; set; }
-        public List<Order> orders { get; set; }
-        public double totalTable { get; set; }
+        public int IdTable { get; set; }
+        public List<Order> Orders { get; set; }
+        public double TotalTable { get; set; }
 
         public Table()
         {
-            idTable = nextId++;
-            orders = new List<Order>();
-            totalTable = 0;
+            IdTable = nextId++;
+            Orders = new List<Order>();
+            TotalTable = 0;
         }
 
         public void ResetTable()
         {
-            orders.Clear();
-            totalTable = 0;
+            Orders.Clear();
+            TotalTable = 0;
         }
 
         public void ViewSummary()
         {
-            Console.WriteLine($"Table {idTable} Summary:");
-            foreach (Order order in orders)
+            Console.WriteLine($"Table {IdTable} Summary:");
+            foreach (Order order in Orders)
             {
-                Console.WriteLine($"Order ID: {order.idOrder}, Total: {order.totalOrder}");
+                Console.WriteLine($"Order ID: {order.IdOrder}, Total: {order.TotalOrder}");
             }
-            Console.WriteLine($"Total Table: {totalTable}");
+            Console.WriteLine($"Total Table: {TotalTable}");
         }
 
         public void CalculateTotalTable()
         {
-            totalTable = 0;
-            foreach (Order order in orders)
+            TotalTable = 0;
+            foreach (Order order in Orders)
             {
-                totalTable += order.totalOrder;
+                TotalTable += order.TotalOrder;
             }
         }
     }

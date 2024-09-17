@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-
-namespace Bar.src.models
+using BarProject.Bar.src.controllers;
+namespace BarProject.Bar.src.models
 {
     public class Waiter
     {
@@ -34,10 +34,9 @@ namespace Bar.src.models
             return order;
         }
 
-        public void PayOrder(Order order, float tip)
+        public void PayOrder(OrderManager OrderManager)
         {
-            order.IsPaid = true;
-            order.Tip = tip;
+            OrderManager.PayOrder();
             UpdateWaiter();
         }
 
@@ -49,9 +48,9 @@ namespace Bar.src.models
 
             foreach (var order in OrdersPlaced)
             {
-                if (order.IsPaid)
+                if (order.Status)
                 {
-                    TotalValueTips += (float)order.Tip;
+                    TotalValueTips += (float)order.ValueTip;
                     TotalTips++;
                 }
             }

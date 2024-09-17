@@ -1,13 +1,13 @@
 using System;
 
-namespace BarProject.Src
+namespace BarProject.Bar.src.models
 {
     public class Admin
     {
-        public int idAdmin { get; set; }
-        public string nameAdmin { get; set;}
+        public int IdAdmin { get; set; }
+        public string NameAdmin { get; set;}
         private string _password { get; set; }
-        public string password 
+        public string Password 
         {
             get { return _password; }
             set { _password = value; }

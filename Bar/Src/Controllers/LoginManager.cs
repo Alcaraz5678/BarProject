@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using BarProject.Bar.src.models;
+namespace BarProject.Bar.src.controllers
 
-namespace BarProject.Src
 {
     public class LoginManager
     {

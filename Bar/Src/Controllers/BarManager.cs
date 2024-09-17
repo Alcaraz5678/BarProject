@@ -1,24 +1,26 @@
 using System;
+using BarProject.Bar.src.models;
 
-namespace BarProject.Src
+namespace BarProject.Bar.src.controllers
 {
     public class BarManager
-    
-    
     {
+        public models.Bar bar = new();
+
         public BarManager()
         {
             //Constructor por defecto
         }
 
-        public void ViewSummaryWaiter()
+        public int ViewSummaryWaiter()
         {
-            //Implementar
+            return bar.ViewSummaryWaiter(09);
+        
         }
 
         public void ViewSummaryTable()
         {
-            //Implementar
+            bar.ViewSummaryTables(0); // Call the method from Bar class
         }
 
         public void AddAdmin()
@@ -30,7 +32,7 @@ namespace BarProject.Src
         {
             //Implementar
         }
-        
+
         public void GenerateOrder()
         {
             //Implementar

@@ -1,18 +1,18 @@
 using System;
 
-namespace BarProject.Src
+namespace BarProject.Bar.src.models
 {
     public class Product
     {
         private static int nextId = 1;
 
-        public int idProduct { get; set; }
-        public string name { get; set; }
-        public double price { get; set; }
+        public int IdProduct { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
 
         public Product()
         {
-            idProduct = nextId++;
+            IdProduct = nextId++;
         }
     }
 }

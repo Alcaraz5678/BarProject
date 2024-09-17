@@ -1,27 +1,29 @@
 using System;
+using System.Collections.Generic;
 
-namespace BarProject.Src
+namespace BarProject.Bar.src.models
 {
     public class Bar
     {
-        public string nameBar { get; set; }
-        public List<Table> tables { get; set; }
-        public List<Admin> admins { get; set; }
-        public List<Waiter> waiters { get; set; }
-        public Inventory inventory { get; set; }
+        public string NameBar { get; set; }
+        public List<Table> Tables { get; set; }
+        public List<Admin> Admins { get; set; }
+        public List<Waiter> Waiters { get; set; }
+        public Inventory Inventory { get; set; }
 
         public Bar()
         {
-            tables = new List<Table>();
-            admins = new List<Admin>();
-            waiters = new List<Waiter>();
+            Tables = new List<Table>();
+            Admins = new List<Admin>();
+            Waiters = new List<Waiter>();
         }
 
-        public void ViewSummaryWaiter(Waiter waiter)
+        public int ViewSummaryWaiter(int IdWaiter)
         {
-            //Implementar
+            return 0;
         }
-          public void ViewSummaryTables(Table table)
+        
+          public void ViewSummaryTables(int IdTable)
         {
             //Implementar
         }  

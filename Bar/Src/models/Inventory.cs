@@ -1,6 +1,6 @@
 using System;
-
-namespace BarProject.Src
+using System.Collections.Generic;
+namespace BarProject.Bar.src.models
 {
     public class Inventory
     {

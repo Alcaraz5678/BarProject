@@ -1,6 +1,8 @@
 using System;
+using BarProject.Bar.src.models;
 
-namespace BarProject.Src
+
+namespace BarProject.Bar.src.controllers
 {
     public class OrderManager
     {
@@ -11,7 +13,7 @@ namespace BarProject.Src
 
         public Order GenerateOrder()
         {
-            //Implementar
+            return new Order();
         }
 
         public void AddProduct()
