@@ -12,15 +12,15 @@ namespace BarProject.Bar.src.controllers
             //Constructor por defecto
         }
 
-        public int ViewSummaryWaiter()
+        public void ViewSummaryWaiter()
         {
-            return bar.ViewSummaryWaiter(09);
+            bar.ViewSummaryWaiter();
         
         }
 
         public void ViewSummaryTable()
         {
-            bar.ViewSummaryTables(0); // Call the method from Bar class
+            bar.ViewSummaryTables(); // Call the method from Bar class
         }
 
         public void AddAdmin()

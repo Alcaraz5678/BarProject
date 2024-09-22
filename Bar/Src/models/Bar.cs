@@ -18,14 +18,19 @@ namespace BarProject.Bar.src.models
             Waiters = new List<Waiter>();
         }
 
-        public int ViewSummaryWaiter(int IdWaiter)
+        public void ViewSummaryWaiter()
         {
-            return 0;
+            
         }
         
-          public void ViewSummaryTables(int IdTable)
+        public string ViewSummaryTables()
         {
-            //Implementar
+            var summaries = new List<string>();
+            foreach (Table table in Tables)
+            {
+                summaries.Add(table.ViewSummary());
+            }
+            return string.Join(Environment.NewLine, summaries);
         }  
 
     }

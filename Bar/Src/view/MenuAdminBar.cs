@@ -1,6 +1,6 @@
 using System;
 
-namespace Bar.Src.View
+namespace BarProject.Bar.Src.View
 {
     public class MenuAdminBar : MenuManager
     {

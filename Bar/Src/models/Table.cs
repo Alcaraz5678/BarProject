@@ -23,14 +23,9 @@ namespace BarProject.Bar.src.models
             TotalTable = 0;
         }
 
-        public void ViewSummary()
+        public string ViewSummary()
         {
-            Console.WriteLine($"Table {IdTable} Summary:");
-            foreach (Order order in Orders)
-            {
-                Console.WriteLine($"Order ID: {order.IdOrder}, Total: {order.TotalOrder}");
-            }
-            Console.WriteLine($"Total Table: {TotalTable}");
+            return this.ToString();
         }
 
         public void CalculateTotalTable()
@@ -40,6 +35,22 @@ namespace BarProject.Bar.src.models
             {
                 TotalTable += order.TotalOrder;
             }
+        }
+
+        public override string ToString()
+        {
+            string result = $"Table {IdTable} Summary:\n";
+            
+            // Iterar sobre los pedidos
+            foreach (Order order in Orders)
+            {
+                result += $"  Order ID: {order.IdOrder}, Total: ${order.TotalOrder}\n";
+            }
+
+            // Agregar el total de la mesa
+            result += $"Total Table: ${TotalTable}\n";
+
+            return result;
         }
     }
 }    

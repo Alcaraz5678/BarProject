@@ -14,6 +14,11 @@ namespace BarProject.Bar.src.models
         {
             IdProduct = nextId++;
         }
+
+        public override string ToString()
+        {
+            return $"Id: {IdProduct}, Name: {Name}, Price: {Price}";
+        }
     }
 }
 //ya esta listo
